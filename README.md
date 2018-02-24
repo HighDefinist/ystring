@@ -33,7 +33,7 @@ results in:
 
 	A=1 B=2.3 C=abbl D=[1;2] %
   
-Integral types, floating point types, strings, wstrings, and tuple of any of these types are supported as parameters. 
+Integral types, floating point types, strings, wstrings, and tuples of any of these types are supported as parameters. 
 
 Instead of ```yprintf()```, you can also use ```ystr()``` which has the same syntax, but returns the formatted string instead of printing it. 
 
