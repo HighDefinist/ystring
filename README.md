@@ -27,11 +27,11 @@ You can download the latest version of *ystring* by cloning the GitHub repositor
 
 Use it just like ```printf()```, except that you omit any format specifiers. You only write ```%```. Writing ```%%``` outputs a single ```%``` instead.
 
-  yprintf("A=% B=% C=% D=% %%\n",1,2.3,"abbl", make_tuple(1,2));
+	yprintf("A=% B=% C=% D=% %%\n",1,2.3,"abbl", make_tuple(1,2));
 
 results in:
 
-  A=1 B=2.3 C=abbl D=[1;2] %
+	A=1 B=2.3 C=abbl D=[1;2] %
   
 Integral types, floating point types, strings, wstrings, and tuple of any of these types are supported as parameters. 
 
