@@ -3,7 +3,9 @@
 #pragma once
 
 #include <codecvt>
+#include <locale>
 #include <string>
+#include <stdio.h>
 
 /////////////
 // ystring //
@@ -26,14 +28,14 @@ namespace std {
 
     inline void yadd_str(string& s, const float& value) {
       char cc[20];
-      auto i = sprintf_s(&cc[0], 20, "%.7g", value);
+      auto i = snprintf(&cc[0], 20, "%.7g", value);
       (void)i;
       s += cc;
     }
 
     inline void yadd_str(string& s, const double& value) {
       char cc[30];
-      auto i = sprintf_s(&cc[0], 30, "%.15g", value);
+      auto i = snprintf(&cc[0], 30, "%.15g", value);
       (void)i;
       s += cc;
     }
