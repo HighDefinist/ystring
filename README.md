@@ -35,7 +35,7 @@ results in:
   
 Integral types, floating point types, strings, wstrings, and tuple of any of these types are supported as parameters. 
 
-Instead of '''yprintf()''', you can also use ```ystr()``` which has the same syntax, but returns the formatted string instead of printing it. 
+Instead of ```yprintf()```, you can also use ```ystr()``` which has the same syntax, but returns the formatted string instead of printing it. 
 
 ```_str(a)``` converts a single argument ```a``` into a string.
 
