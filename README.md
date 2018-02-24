@@ -14,7 +14,7 @@
 ### Tested on
 
 - Visual Studio 2017
-- GCC 7.3.1
+- GCC 7.3.1 (at least GCC 5.1 required)
 - Clang 5.0.1
 
 ### Download 
