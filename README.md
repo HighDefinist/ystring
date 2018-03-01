@@ -13,9 +13,14 @@
 
 ### Tested on
 
+| [Linux][lin-link] |
+| :---------------: |
+| ![lin-badge]      |
+
+[lin-badge]: https://travis-ci.org/HighDefinist/ystring.svg?branch=master "Travis build status"
+[lin-link]:  https://travis-ci.org/HighDefinist/ystring "Travis build status"
+
 - Visual Studio 2017
-- GCC 7.3.1 (at least GCC 5 required, because GCC 4.9 does not support ```<codecvt>```)
-- Clang 5.0.1
 
 ### Download 
 
