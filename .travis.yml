@@ -10,11 +10,35 @@ matrix:
           sources:
             - ubuntu-toolchain-r-test
           packages:
+            - gcc-5
+            - g++-5
+            - cmake
+      env:
+        - COMPILER=g++-5
+        - CXXFLAGS=-std=c++11
+    - compiler: gcc
+      addons:
+        apt:
+          sources:
+            - ubuntu-toolchain-r-test
+          packages:
             - gcc-6
             - g++-6
             - cmake
       env:
         - COMPILER=g++-6
+        - CXXFLAGS=-std=c++11
+    - compiler: gcc
+      addons:
+        apt:
+          sources:
+            - ubuntu-toolchain-r-test
+          packages:
+            - gcc-7
+            - g++-7
+            - cmake
+      env:
+        - COMPILER=g++-7
         - CXXFLAGS=-std=c++11
     - compiler: clang
       addons:
@@ -28,6 +52,19 @@ matrix:
             - cmake
       env: 
         - COMPILER=clang++-5.0
+        - CXXFLAGS=-std=c++11
+    - compiler: clang
+      addons:
+        apt:
+          sources:
+            - ubuntu-toolchain-r-test
+            - llvm-toolchain-trusty-4.0
+          packages:
+            - clang-4.0
+            - g++-6
+            - cmake
+      env: 
+        - COMPILER=clang++-4.0
         - CXXFLAGS=-std=c++11
 
 before_install:
