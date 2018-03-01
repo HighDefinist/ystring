@@ -9,6 +9,8 @@ if(NOT hasParent)
   include_directories(${PROJECT_SOURCE_DIR}/include_extra)
   add_executable(ystring example/simple/ystr.cpp)
   add_executable(ystring_test test/basic/ystr_test.cpp)
+  target_compile_features(ystring INTERFACE cxx_std_11)
+  target_compile_features(ystring_test INTERFACE cxx_std_11)
   enable_testing()
   add_test(NAME ystring_test COMMAND ystring_test)
   #add_custom_target(check 
