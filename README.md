@@ -3,7 +3,7 @@
 
 ### Requirements
 
-- C++11, including the ```<chrono>``` library
+- C++11, including the ```<codecvt>``` library
 - [CMake](https://cmake.org/) (only necessary for building the example)
 
 ### Installation
@@ -14,7 +14,7 @@
 ### Tested on
 
 - Visual Studio 2017
-- GCC 7.3.1 (at least GCC 5.1 required)
+- GCC 7.3.1 (at least GCC 5 required, because GCC 4.9 does not support ```<codecvt>```)
 - Clang 5.0.1
 
 ### Download 
