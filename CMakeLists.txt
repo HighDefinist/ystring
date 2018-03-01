@@ -19,7 +19,7 @@ if(NOT hasParent)
             #${CMAKE_CTEST_COMMAND} -C $<CONFIG>
     #WORKING_DIRECTORY ${CMAKE_BINARY_DIR}
     #DEPENDS ALL_BUILD
-    #) 
+    #)  
 endif()
  
  
