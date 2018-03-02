@@ -16,6 +16,7 @@ before_install:
   - pip install --user cpp-coveralls
 
 script:
+  - CXX=/usr/bin/g++-6 CC=/usr/bin/gcc-6
   - ./gocoverage.sh
 
 after_success:
@@ -25,4 +26,4 @@ after_success:
   - lcov --remove coverage.info '/usr/*' --output-file coverage.info # filter out system
   - lcov --list coverage.info #debug info
   # Uploading report to CodeCov
-  - bash <(curl -s https://codecov.io/bash) -t 77bed498-3bca-4051-b639-7b1cb83a7ebb || echo "Codecov did not collect coverage reports"
+  - bash <(curl -s https://codecov.io/bash) || echo "Codecov did not collect coverage reports"
