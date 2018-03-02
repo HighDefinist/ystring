@@ -26,7 +26,7 @@
 
 You can download the latest version of *ystring* by cloning the GitHub repository:
 
-	git clone https://github.com/Solenism/ystring.git
+	git clone https://github.com/HighDefinist/ystring.git
 	
 ### Usage
 
