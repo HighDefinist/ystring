@@ -1,7 +1,7 @@
 cmake_minimum_required (VERSION 3.1)
 project("mz_ystring")
 add_library(${PROJECT_NAME} INTERFACE)
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
+set (CMAKE_CXX_STANDARD 11)
 target_include_directories(${PROJECT_NAME} INTERFACE ${PROJECT_SOURCE_DIR}/include)
 get_directory_property(hasParent PARENT_DIRECTORY)
 if(NOT hasParent)
@@ -10,8 +10,6 @@ if(NOT hasParent)
   add_executable(ystring example/simple/ystr.cpp)
   add_executable(ystring_test test/basic/ystr_test.cpp)
   target_compile_features(ystring INTERFACE cxx_std_11)
-  
-
 
   # Setting default folders
   set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/lib)
@@ -25,7 +23,9 @@ if(NOT hasParent)
     setup_target_for_coverage(Example_coverage ystring_test coverage)
   endif()  
 
-  set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall -pedantic -pthread -g -O0 -fprofile-arcs -ftest-coverage")
+  if (NOT MSVC)
+    set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall -pedantic -pthread -g -O0 -fprofile-arcs -ftest-coverage")
+  endif()
 
   include(CTest)
   enable_testing()
