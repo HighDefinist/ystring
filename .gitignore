@@ -35,3 +35,4 @@
 /.vs
 /build
 /.vscode
+/CMakeFiles

@@ -10,9 +10,29 @@ if(NOT hasParent)
   add_executable(ystring example/simple/ystr.cpp)
   add_executable(ystring_test test/basic/ystr_test.cpp)
   target_compile_features(ystring INTERFACE cxx_std_11)
-  target_compile_features(ystring_test INTERFACE cxx_std_11)
+  
+
+
+  # Setting default folders
+  set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/lib)
+  set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/lib)
+  set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
+  # In CMakeModules I include code coverage for c++
+  set(CMAKE_MODULE_PATH ${PROJECT_SOURCE_DIR}/CMakeModules)
+
+  if(CMAKE_COMPILER_IS_GNUCXX)
+    include(CodeCoverage)
+    setup_target_for_coverage(Example_coverage ystring_test coverage)
+  endif()  
+
+  set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall -pedantic -pthread -g -O0 -fprofile-arcs -ftest-coverage")
+
+  include(CTest)
   enable_testing()
-  add_test(NAME ystring_test COMMAND ystring_test)
+  target_compile_features(ystring_test INTERFACE cxx_std_11)
+  add_test(Test_basic ystring_test)
+
+
   #add_custom_target(check 
         #${CMAKE_COMMAND} -E echo CWD=${CMAKE_BINARY_DIR}
         #COMMAND ${CMAKE_COMMAND} -E echo CMD=${CMAKE_CTEST_COMMAND} -C $<CONFIG>
