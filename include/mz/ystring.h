@@ -9,7 +9,7 @@
 
 /////////////
 // ystring //
-/////////////
+///////////// 
 
 namespace std {
   namespace mz {

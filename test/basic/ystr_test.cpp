@@ -4,7 +4,7 @@
 using namespace std;
 using namespace std::mz;
 
-#define CATCH_CONFIG_MAIN  
+#define CATCH_CONFIG_MAIN   
 #include "catch.hpp"
 
 TEST_CASE("ystring main", "Main functionality") {
