@@ -44,7 +44,7 @@ namespace std {
       while (*s) {
         if (*s=='%') {
           if (*(s+1)=='%') ++s;
-          throw runtime_error("invalid format string: missing arguments");
+          else throw runtime_error("invalid format string: missing arguments");
         }
         result += *s++;
       }
