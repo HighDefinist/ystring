@@ -1,82 +1,23 @@
-sudo: required
 dist: trusty
+sudo: false
 language: cpp
 
-matrix:
-  include:
-    - compiler: gcc
-      addons:
-        apt:
-          sources:
-            - ubuntu-toolchain-r-test
-          packages:
-            - gcc-5
-            - g++-5
-            - cmake
-      env:
-        - COMPILER=g++-5
-        - CXXFLAGS=-std=c++11
-    - compiler: gcc
-      addons:
-        apt:
-          sources:
-            - ubuntu-toolchain-r-test
-          packages:
-            - gcc-6
-            - g++-6
-            - cmake
-      env:
-        - COMPILER=g++-6
-        - CXXFLAGS=-std=c++11
-    - compiler: gcc
-      addons:
-        apt:
-          sources:
-            - ubuntu-toolchain-r-test
-          packages:
-            - gcc-7
-            - g++-7
-            - cmake
-      env:
-        - COMPILER=g++-7
-        - CXXFLAGS=-std=c++11
-    - compiler: clang
-      addons:
-        apt:
-          sources:
-            - ubuntu-toolchain-r-test
-            - llvm-toolchain-trusty-5.0
-          packages:
-            - clang-5.0
-            - g++-6
-            - cmake
-      env: 
-        - COMPILER=clang++-5.0
-        - CXXFLAGS=-std=c++11
-    - compiler: clang
-      addons:
-        apt:
-          sources:
-            - ubuntu-toolchain-r-test
-            - llvm-toolchain-trusty-4.0
-          packages:
-            - clang-4.0
-            - g++-6
-            - cmake
-      env: 
-        - COMPILER=clang++-4.0
-        - CXXFLAGS=-std=c++11
+addons:
+  apt:
+    sources:
+      - ubuntu-toolchain-r-test
+      - llvm-toolchain-trusty-5.0
+    packages:
+      - g++-6
+      - clang-5.0
 
 before_install:
-  - sudo apt-get update -qq
-  - sudo apt-get install -y libopencv-dev
   - pip install --user cpp-coveralls
+
 script:
-  - mkdir build
-  - cd build
-  - cmake -DCMAKE_CXX_COMPILER=$COMPILER -DCMAKE_BUILD_TYPE=Debug ..
-  - make -j8
-  - make -j8 setup_coverage
-  - ctest
+  - CXX=/usr/bin/g++-6 CC=/usr/bin/gcc-6 cmake -DCOVERAGE=1 .
+  - cmake --build . 
+  - ./tests
+
 after_success:
-  - coveralls --root . -E ".*CMakeFiles.*"   
+  - coveralls --root . -E ".*CMakeFiles.*" 
