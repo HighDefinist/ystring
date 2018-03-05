@@ -13,13 +13,15 @@
 
 ### Tests
 
-| [Linux][lin-link] | Code-coverage |
+| [Linux][lin-link] | Code-coverage     |
 | :---------------: | :---------------: |
 | ![lin-badge]      | ![cov-badge]      | 
 
 [lin-badge]: https://travis-ci.org/HighDefinist/ystring.svg?branch=master "Travis build status"
 [lin-link]:  https://travis-ci.org/HighDefinist/ystring "Travis build status"
 [cov-badge]: https://codecov.io/gh/HighDefinist/ystring/branch/master/graph/badge.svg "Code coverage status"
+
+[https://ci.appveyor.com/project/HighDefinist/ystring?svg=true](https://ci.appveyor.com/api/projects/status/HighDefinist/ystring?svg=true)
 
 - Visual Studio 2017
 
