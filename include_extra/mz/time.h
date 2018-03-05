@@ -57,7 +57,7 @@ namespace std {
     public:
       bool enabled;
       const double& time;
-      Ttimer(): time_(0),ison(false),time(time_),enabled(true) {}
+      Ttimer(): time_(0),ison(false), enabled(true), time(time_) {}
       bool Start() {
         if(!enabled) return false;
         if (ison) throw invalid_argument("Ttimer::Start(): Timer was already running!");
