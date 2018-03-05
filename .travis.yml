@@ -1,5 +1,5 @@
 dist: trusty
-sudo: required
+sudo: false
 language: cpp
 
 addons:
@@ -12,8 +12,6 @@ addons:
       - g++-5
       - g++-6
       - g++-7
-      - clang-3.6
-      - clang-4.0
       - clang-5.0
       - lcov
 
