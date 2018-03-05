@@ -13,7 +13,7 @@
 
 ### Tests
 
-| [Linux][lin-link] | Windows[win-link] | Code-coverage     |
+| [Linux][lin-link] | [Windows][win-link] | Code-coverage     |
 | :---------------: | :---------------: | :---------------: |
 | ![lin-badge]      | ![win-badge]      | ![cov-badge]      | 
 
