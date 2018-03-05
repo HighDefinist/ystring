@@ -1,5 +1,5 @@
 dist: trusty
-sudo: false
+sudo: required
 language: cpp
 
 addons:
@@ -8,11 +8,11 @@ addons:
       - ubuntu-toolchain-r-test
       - llvm-toolchain-trusty-5.0
     packages:
-      - g++-4
+      - g++-4.9
       - g++-5
       - g++-6
       - g++-7
-      - clang-3.0
+      - clang-3.6
       - clang-4.0
       - clang-5.0
       - lcov
