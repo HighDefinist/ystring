@@ -13,7 +13,7 @@
 
 ### Tests
 
-| [Linux][lin-link] | [Windows][win-link] | Code-coverage     |
+| [Linux][lin-link] | [Windows][win-link] | [Code-coverage][cov-link] |
 | :---------------: | :---------------: | :---------------: |
 | ![lin-badge]      | ![win-badge]      | ![cov-badge]      | 
 
@@ -22,8 +22,9 @@
 [win-badge]: https://ci.appveyor.com/api/projects/status/vy2w7o33gwxtiygy/branch/master?svg=true "AppVeyor build status"
 [win-link]:  https://ci.appveyor.com/project/HighDefinist/ystring/branch/master "AppVeyor build status"
 [cov-badge]: https://codecov.io/gh/HighDefinist/ystring/branch/master/graph/badge.svg "Code coverage status"
+[cov-link]:  https://codecov.io/gh/HighDefinist/ystring/branch/master "Code coverage status"
 
-- Visual Studio 2017
+- Visual Studio 2015 and 2017 (2013 not supported)
 
 ### Download 
 
