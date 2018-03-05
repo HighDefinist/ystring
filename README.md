@@ -11,14 +11,15 @@
 - *ystring* is header only. Therefore, simply copy ```includes/mz/ystring.h``` into a directory of your choice, and ```#include``` it.
 - The namespace is ```std::mz```.
 
-### Tested on
+### Tests
 
-| [Linux][lin-link] |
-| :---------------: |
-| ![lin-badge]      |
+| [Linux][lin-link] | Code-coverage |
+| :---------------: | :---------------: |
+| ![lin-badge]      | ![cov-badge]      | 
 
 [lin-badge]: https://travis-ci.org/HighDefinist/ystring.svg?branch=master "Travis build status"
 [lin-link]:  https://travis-ci.org/HighDefinist/ystring "Travis build status"
+[cov-badge]: https://codecov.io/gh/HighDefinist/ystring/branch/master/graph/badge.svg "Code coverage status"
 
 - Visual Studio 2017
 

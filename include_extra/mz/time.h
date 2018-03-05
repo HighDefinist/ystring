@@ -49,7 +49,7 @@ namespace std {
 
     // Basic timer
     class Ttimer {
-    protected:
+    protected: 
       HighResClock Clock;
       double time_;
       bool ison;
