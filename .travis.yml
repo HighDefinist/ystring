@@ -2,7 +2,7 @@ dist: trusty
 sudo: false
 language: cpp
 
-addon:
+addons:
   apt:
     packages:
       - lcov
