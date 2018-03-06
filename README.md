@@ -24,9 +24,10 @@
 [cov-badge]: https://codecov.io/gh/HighDefinist/ystring/branch/master/graph/badge.svg "Code coverage status"
 [cov-link]:  https://codecov.io/gh/HighDefinist/ystring/branch/master "Code coverage status"
 
-- Visual Studio 2015 and 2017 (2013 not supported, because of incomplete variadic template support)
-- GCC 5 or higher (4.9 not supported, because it lacks ```<codecvt>```)
-- Clang 4 or higher
+- Visual Studio 2015 or newer
+- GCC 5 or newer
+- Clang 4 or newer
+- XCode 6.4 or newer
 
 ### Download 
 
