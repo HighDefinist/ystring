@@ -3,7 +3,7 @@
 
 ### Requirements
 
-- C++11, including the ```<codecvt>``` library
+- C++11
 - [CMake](https://cmake.org/) (only necessary for building the example)
 
 ### Installation
@@ -25,6 +25,8 @@
 [cov-link]:  https://codecov.io/gh/HighDefinist/ystring/branch/master "Code coverage status"
 
 - Visual Studio 2015 and 2017 (2013 not supported)
+- GCC 5 or higher (4.9 not supported, because it lacks ```<codecvt>```)
+- Clang 4 or higher
 
 ### Download 
 
