@@ -30,7 +30,7 @@ matrix:
 
   - os: osx
     osx_image: xcode9.2
-    
+
   - os: linux
     env: COMPILER=g++-5
     addons:
@@ -65,9 +65,6 @@ matrix:
       apt:
         sources: ['ubuntu-toolchain-r-test','llvm-toolchain-trusty-4.0']
         packages: ['clang-4.0','lcov','g++-6']        
-        
-before_install:
-  - pip install --user cpp-coveralls
 
 script:
   - CXX=${COMPILER}
