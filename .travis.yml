@@ -61,7 +61,7 @@ script:
   - echo $COMPILER
   - echo "$COMPILER"
   - echo '$COMPILER'
-  - if [ "$TRAVIS_OS_NAME" == "linux"]; then
+  - if [ "$TRAVIS_OS_NAME" -eq "linux" ]; then
       echo "Linux is here";
       cd ${TRAVIS_BUILD_DIR};
       lcov --directory . --capture --output-file coverage.info; 
