@@ -10,26 +10,10 @@ get_directory_property(hasParent PARENT_DIRECTORY)
 if(NOT hasParent)
   # Include example
   include_directories(${PROJECT_SOURCE_DIR}/include)
-  include_directories(${PROJECT_SOURCE_DIR}/include_extra)
-  add_executable(ystring example/simple/ystr.cpp)
-  target_compile_features(ystring INTERFACE cxx_std_11)
+  include_directories(${PROJECT_SOURCE_DIR}/thirdparty)
 
-  # Enable coverage testing
-  add_executable(ystring_test test/basic/ystr_test.cpp)
-  set(CMAKE_MODULE_PATH ${PROJECT_SOURCE_DIR}/CMakeModules)
-  if(CMAKE_COMPILER_IS_GNUCXX)
-    include(CodeCoverage)
-    setup_target_for_coverage(setup_coverage ystring_test coverage)
-  endif()  
-  if (NOT MSVC)
-    set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall -pedantic -pthread -g -O0 -fprofile-arcs -ftest-coverage")
-  endif()
-
-  # Include test
-  include(CTest)
-  enable_testing()
-  target_compile_features(ystring_test INTERFACE cxx_std_11)
-  add_test(Test_basic ystring_test)
+  add_subdirectory(example)
+  add_subdirectory(test)
 endif()
  
  
