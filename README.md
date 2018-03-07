@@ -19,7 +19,7 @@
 
 [lin-badge]: https://travis-ci.org/HighDefinist/ystring.svg?branch=master "Travis build status"
 [lin-link]:  https://travis-ci.org/HighDefinist/ystring "Travis build status"
-[win-badge]: https://ci.appveyor.com/api/projects/status/afkqghkq5sx6iqkn/branch/master?svg=true "AppVeyor build status"
+[win-badge]: https://ci.appveyor.com/api/projects/status/jx3m1qoqfsf8amyp/branch/master?svg=true "AppVeyor build status"
 [win-link]:  https://ci.appveyor.com/project/HighDefinist/ystring/branch/master "AppVeyor build status"
 [cov-badge]: https://codecov.io/gh/HighDefinist/ystring/branch/master/graph/badge.svg "Code coverage status"
 [cov-link]:  https://codecov.io/gh/HighDefinist/ystring/branch/master "Code coverage status"
