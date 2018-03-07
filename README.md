@@ -53,4 +53,4 @@ Instead of ```yprintf()```, you can also use ```ystr()``` which has the same syn
 
 Also take a look at the example file:
 
-	example\simple\ystr.cpp
+	example\basic\basic.cpp
