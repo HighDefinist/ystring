@@ -88,7 +88,7 @@ namespace std {
       ui64 N_;
       double t_min_,t_max_,t_last_;
     public:
-      double dur_avg() { return time_/(double)N_; }
+      double dur_avg() { return time_/static_cast<double>(N_); }
       double dur_tot() { return time_; }
       const ui64& N;
       const double &dur_min,&dur_max,&dur_last;

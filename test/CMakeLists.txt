@@ -1,3 +1,8 @@
+if (NOT MSVC)
+  #set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall -pedantic -pthread -g -O0 -fprofile-arcs -ftest-coverage")
+  set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -g -O0 -fprofile-arcs -ftest-coverage")
+endif()
+
 # Setup test
 add_executable(the_test main.cpp)
 target_compile_features(the_test INTERFACE cxx_std_11)
@@ -8,9 +13,6 @@ if(CMAKE_COMPILER_IS_GNUCXX)
   include(CodeCoverage)
   setup_target_for_coverage(setup_coverage the_test coverage)
 endif()  
-if (NOT MSVC)
-  set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall -pedantic -pthread -g -O0 -fprofile-arcs -ftest-coverage")
-endif()
 
 # Enable testing
 include(CTest)

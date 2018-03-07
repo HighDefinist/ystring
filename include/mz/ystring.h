@@ -28,7 +28,7 @@ namespace std {
 
     inline void yadd_str(string& s, const float& value) {
       char cc[20];
-      auto i = snprintf(&cc[0], 20, "%.7g", value);
+      auto i = snprintf(&cc[0], 20, "%.7g", static_cast<double> (value));
       (void)i;
       s += cc;
     }
